@@ -1,5 +1,5 @@
 plot2 <- function(){
-  
+  data11<- plotimport()
   dev.new()
   
   png(filename = "plot2.png", width = 480, height = 480, units='px')

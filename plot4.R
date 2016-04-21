@@ -1,8 +1,9 @@
 plot4 <- function(){
-  
+  data11<- plotimport()
   
   dev.new()
-  png(filename = "plot4.png", width = 480, height = 480, units='px')
+  #png(filename = "plot4.png", width = 480, height = 480, units='px')
+  png("plot4.png")
   split.screen( figs = c( 1, 2 ))
   split.screen( figs = c( 2,1 ),screen = 1)
   split.screen( figs = c( 2,1 ),screen = 2)
@@ -26,5 +27,5 @@ plot4 <- function(){
   screen(6)
   plot(data11$datetime,data11$Global_reactive_power , type ='l',ylab = "Global reactive power", xlab = "")
   close.screen(all.screens = TRUE)
-  
+  dev.off()
 }

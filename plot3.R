@@ -1,4 +1,5 @@
 plot3 <- function(){
+  data11<- plotimport()
   dev.new()
   png(filename = "plot3.png", width = 480, height = 480, units='px')
   plot(data11$datetime,data11$Sub_metering_1, col = 'blue' , type ='l',ylab = "Global Active Power (kilowatts)", xlab = "")
